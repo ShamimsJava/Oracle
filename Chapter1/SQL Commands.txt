@@ -1,7 +1,7 @@
-==========================================
-SQL Important Commands Which Must to Know
-Md. Shamim Sarker
-==========================================
+==============================================
+Chapter - 1
+Retrieving Data Using the SQL SELECT Statement
+==============================================
 
 Selecting All Columns with Duplicate Values
 -------------------------------------------
@@ -55,3 +55,9 @@ Duplicate Rows Not Allowed
 --------------------------
 SELECT DISTINCT attribute1
 FROM tableName;
+
+Displaying the Table Structure
+------------------------------
+DESC tableName;
+DESC[RIBE] tableName;
+DESCRIBE tableName;
