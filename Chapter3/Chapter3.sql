@@ -39,7 +39,7 @@ SELECT employee_id,
   concat(first_name, last_name) NAME,
   job_id,
   LENGTH(last_name),
-  instr(last_name, 'a') "Contains 'a'?"
+  INSTR(last_name, 'a') "Contains 'a'?"
 FROM employees
 WHERE SUBSTR(job_id, 4) = 'REP';
 
