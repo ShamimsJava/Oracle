@@ -63,14 +63,50 @@ Conversion Function
 	TO_CHAR
 	TO_NUMBER
 	TO_DATE
-	
+
+Conversion Date Element
+-----------------------
+	YYYY
+	YY
+	YEAR
+	MM
+	MONTH
+	MON
+	DD
+	DAY
+	DY
+	FM
+	SPTH
+	AM
+	PM
+	HH OR HH12
+	HH24
+	MI
+	SS
+	SSSSS
+
+Conversion Number Element
+-------------------------
+	9
+	0
+	$
+	.
+	,
+
 General Function
 ----------------
 	NVL
 	NVL2
 	NULLIF
 	COALESCE
+	
+Conditional Expression Method
+-----------------------------
 	CASE
+		WHEN
+		THEN
+		ELSE
+		END
 	DECODE
 	
 Group Function
@@ -127,3 +163,20 @@ Set Operator
 	UNION ALL
 	INTERSECT
 	MINUS
+	
+Some Important Code For SQL Plus
+--------------------------------
+	alter user hr identified by hr account unlock;
+	
+	select tname
+	from tab;
+	
+	show all;
+	show pagesize;
+	show linesize;
+	set pagesize 500;
+	set linesize 200;
+	connect;
+	conn system/system;
+	conn hr/hr;
+	
