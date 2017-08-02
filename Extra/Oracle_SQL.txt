@@ -163,7 +163,21 @@ Set Operator
 	UNION ALL
 	INTERSECT
 	MINUS
+
+Data Manipulation Language
+--------------------------
+	SELECT
+	INSERT
+	UPDATE
+	DELETE
+	MERGE
+
+Keyword
+-------
+	INSERT INTO
+	VALUE
 	
+
 Some Important Code For SQL Plus
 --------------------------------
 	alter user hr identified by hr account unlock;
