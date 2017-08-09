@@ -1,9 +1,10 @@
-create view empvu80
-as select employee_id, last_name, salary
-from employees
-where department_id = 80;
-
-desc empvu80;
+create view v1
+    as 
+        select employee_id, last_name, salary
+        from employees
+        where department_id = 80;
+        
+desc v1;
 
 select *
-from empvu80;
+from v1;
