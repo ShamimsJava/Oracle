@@ -1,0 +1,83 @@
+
+SQL*Plus: Release 11.2.0.2.0 Production on Wed Aug 9 12:09:55 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> conn sys as sysdba
+Enter password:
+Connected.
+SQL> create user idb identified by idb;
+
+User created.
+
+SQL> conn idb/idb
+ERROR:
+ORA-01045: user IDB lacks CREATE SESSION privilege; logon denied
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> conn sys as sysdba;
+Enter password:
+Connected.
+SQL> grant create session to idb;
+
+Grant succeeded.
+
+SQL> conn idb/idb
+Connected.
+SQL> conn sys as sysdba
+Enter password:
+Connected.
+SQL> grant create create table to idb;
+grant create create table to idb
+      *
+ERROR at line 1:
+ORA-00990: missing or invalid privilege
+
+
+SQL> conn sys as sysdba
+Enter password:
+Connected.
+SQL> grant create session, create table, create sequence, create view
+  2  to idb;
+
+Grant succeeded.
+
+SQL> create role manager;
+
+Role created.
+
+SQL> grant create session, create table, create sequence, create view to manager;
+
+Grant succeeded.
+
+SQL> create user idb2 identified by idb2;
+
+User created.
+
+SQL> grant manager to idb2;
+
+Grant succeeded.
+
+SQL> create table table1(st_id number(10), last_name varchar2(15));
+
+Table created.
+
+SQL> insert into table1(100, 'Shamim');
+insert into table1(100, 'Shamim')
+                   *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> desc table1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ST_ID                                              NUMBER(10)
+ LAST_NAME                                          VARCHAR2(15)
+
+SQL> select * from table1;
+
+no rows selected
+
+SQL>
