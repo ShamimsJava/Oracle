@@ -108,8 +108,6 @@ SQL> grant select on student to bdguest with grant option;
 
 SQL> conn bdoperator/bdoperator;
 
-SQL> grant create session to bdoperator;
-
 SQL> select * from bdmanager.student;
 
 SQL> insert into bdmanager.student(id, name) values(210, 'xyz');
