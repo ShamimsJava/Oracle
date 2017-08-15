@@ -1,5 +1,5 @@
 declare
-	a number(2) := 10;
+	a number(2);
 begin
 	a := 10;
 	if(a<20) then
